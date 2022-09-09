@@ -7,17 +7,18 @@
  */
 int main(void)
 {
-	char c;
+	char alpahbet;
 
-	for (c = 'a'; c <= 'z'; c++)
-
+	for (alpahbet = 'a';  <= 'z'; alpahabet++)
 	{
-
-		if (c != 'e' && c != 'q')
-
-		{
-			putchar(c);
-		}
+		if (alpahbet == 'q')
+			continue;
+                  
+		if (alpahbet == 'e')
+			continue;
+		
+			putchar(alphabet);
+		
 	}
 
 	putchar('\n');
