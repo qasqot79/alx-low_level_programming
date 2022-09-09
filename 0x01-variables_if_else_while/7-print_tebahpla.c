@@ -1,14 +1,15 @@
 #include <stdio.h>
 /**
  * main-Entry point Print alphabet in reverse
+ * 
  * Return: Always (Success)
  */
 int main(void)
 {
-    char c;
-    for (c ='z';c >='a';c--)
+    char alphabet;
+    for (alphabet = 122 ; alphabet >='97; alphabet--)
     {
-      putchar(c);
+      putchar(alphabet;
 	
      }
      putchar('\n');
