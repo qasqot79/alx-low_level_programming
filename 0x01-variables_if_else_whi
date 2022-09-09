@@ -1,9 +1,6 @@
-
-
 #include <stdio.h>
-
 /**
- * main - Prints 3 combination of numbers
+ * main - Prints combination of 3 digits 
  *
  * Return: Always (Success)
  */
