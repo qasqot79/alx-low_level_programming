@@ -4,13 +4,14 @@
  * 
  * Return: Always (Success)
  */
-int main(void)
+     int main(void)
 {
-    char alphabet;
-    for (alphabet = 122 ; alphabet >='97; alphabet--)
-    {
-      putchar(alphabet;
+     char alphabet;
 	
+     for (alphabet = 122 ; alphabet >='97; alphabet--)
+    
+     {
+          putchar(alphabet;
      }
      putchar('\n');
 	
