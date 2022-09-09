@@ -7,34 +7,22 @@
 */
 int main(void)
 {
-	  char c;
+char lower_case;
+char upper_case;
 
-         for (c = 'a'; c <= 'z'; c++)
-
-	{
-
-		putchar(c);
-
-	}
-
-	for (c = 'A'; c <= 'Z'; c++)
-
-	{
-
-		putchar(c);
-	}
-
-	       putchar('\n');
-
-	       return (0);
+for (lower_case = 'a'; lower_case <= 'z'; lower_case++)	
+{
+putchar(lower_case);	
 }
 
+for  (upper_case = 'A'; upper_case <= 'Z'; upper_case++)	
+{
+putchar(upper_case);
+}	
+putchar('\n');
 
-
-
-
-
-
-
-
-
+return (0);
+	
+}
+	
+        
