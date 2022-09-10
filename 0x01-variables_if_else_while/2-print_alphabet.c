@@ -1,9 +1,8 @@
 #include <stdio.h> 
+
 /**
-* main - entry point
-* 
-* Descrption Prints the alphabetic in lower case
-* 
+* proogramm that print alphabet in lower case
+* Descrption Prints the alphabet in lower case
 * Return: Always (Success)
 */
 int main(void)
