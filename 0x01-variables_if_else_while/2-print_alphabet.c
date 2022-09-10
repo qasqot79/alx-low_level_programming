@@ -1,15 +1,17 @@
 #include <stdio.h> 
 /**
 * main - entry point
+* 
 * Descrption Prints the alphabetic in lower case
+* 
 * Return: Always (Success)
 */
 int main(void)
 {
-	char c;
-	  for (c = 'a'; c <= 'z'; c++)
+	   char c;
+	   for (c = 'a'; c <= 'z'; c++)
 	   putchar(c);
-	putchar('\n');
+	   putchar('\n');
 	
-	return (0);
+	  return (0);
 }
