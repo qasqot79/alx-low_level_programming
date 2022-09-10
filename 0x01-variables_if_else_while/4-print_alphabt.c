@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-	char alpahbet;
-	for (alpahbet = 'a';  <= 'z'; alpahabet++)
+	char alphabet;
+	for (alphabet = 'a';  <= 'z'; alphabet++)
 	{
-		if (alpahbet == 'q')
+		if (alphabet == 'q')
 			continue;
-                if (alpahbet == 'e')
+                if (alphabet == 'e')
 			continue;
 			putchar(alphabet);	
 	}
