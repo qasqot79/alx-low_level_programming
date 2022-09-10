@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * function - Prints allnumbers of base 16 in lowercase.
+ * function - Prints all numbers of base 16 in lowercase.
  *
  * Return: Always 0
  */
