@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Prints some letters of alphabet
  *
@@ -8,17 +7,13 @@
 int main(void)
 {
 	char alpahbet;
-
 	for (alpahbet = 'a';  <= 'z'; alpahabet++)
 	{
 		if (alpahbet == 'q')
 			continue;
-                  
-		if (alpahbet == 'e')
+                if (alpahbet == 'e')
 			continue;
-		
-			putchar(alphabet);
-		
+			putchar(alphabet);	
 	}
 	putchar('\n');
 
