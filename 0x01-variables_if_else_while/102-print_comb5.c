@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Prints 3 combination of numbers
  *
@@ -34,18 +33,14 @@ int main(void)
                                      putchar(' ');
 					}
 					}
+
+                                   }
 			
-                                  }
-			
-                             }
+                              }
 
+		         }
 
-		       }
-
-
-	         }
-                 
-	         putchar('\n');
-
-                 return (0);
+	            }
+                   putchar('\n');
+                   return (0);
 }
