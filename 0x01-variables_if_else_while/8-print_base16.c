@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Prints a hexadecimal string
  *
@@ -8,7 +7,6 @@
 int main(void)
 {
          char c;
-
          for (c = '0'; c <= '9'; c++)
          {
           putchar(c);
@@ -19,9 +17,5 @@ int main(void)
    }
    putchar('\n');
 
-return (0);
-
+   return (0);
 }
-
-
-
