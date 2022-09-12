@@ -1,33 +1,52 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
-/** main - Prints all possible combinations of two two-digit numbers,
- *        ranging from 0-99, separated by a comma followed by a space.
+/* program that prints all possible combinations of two two-digit numbers */
+/**
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int x1, x2;
+	int i, j, k, l;
 
-	for (x1 = 0; x1 <= 98; x1++)
+	i = j = k = 48; l = 49;
+	while  ((i < 58))
 	{
-		for (x2 = x1 + 1; x2 <= 99; x2++)
+		putchar(i); putchar(j); putchar(32); putchar(k); putchar(l);
+		if ((i == 57) && (j == 56) && (k == 57) && (l == 57))
 		{
-			putchar((1 / 10) + '0');
-			putchar((1 % 10) + '0');
-			putchar(' ');
-			putchar((x2 / 10) + '0');
-			putchar((x2 % 10) + '0');
-
-			if (x1 == 98 && x2 == 99)
-				continue;
-
-			putchar(',');
-			putchar(' ');
+			putchar('\n'); i++;
+		}
+		else
+		{
+			putchar(44); putchar(32);
+			if ((k == 57) && (l == 57))
+			{
+				if (j < 56)
+				{
+					l = ++j + 1; k = i;
+				}
+				else if (j == 56)
+				{
+					j++; k = i + 1; l = 48;
+				}
+				else if (j == 57)
+				{
+					j = 48; l = 49; k = ++i;
+				}
+			}
+			else if (l < 57)
+			{
+				l++;
+			}
+			else
+			{
+				l = 48; k++;
+			}
 		}
 	}
-
-	putchar('\n');
-
 	return (0);
 }
