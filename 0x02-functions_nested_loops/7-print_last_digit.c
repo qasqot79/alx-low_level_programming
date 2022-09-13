@@ -9,16 +9,16 @@
  *
  * Return: Always 0.
  */
- int print_last_digit(int number)
- {
- int lastDigit = number % 10;
- if (lastDigit < 0)
- {
- lastDigit = lastDigit * (-1);
- _putchar('0' + lastDigit);
- return (lastDigit);
- }
+int print_last_digit(int number)
+{
+int lastDigit = number % 10;
+if (lastDigit < 0)
+{
+lastDigit = lastDigit * (-1);
 _putchar('0' + lastDigit);
+return (lastDigit);
+}
+ _putchar('0' + lastDigit);
 _putchar('\n');
-return (0);
+ return (0);
 }
