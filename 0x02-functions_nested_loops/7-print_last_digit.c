@@ -1,4 +1,3 @@
-#include <limits.h>
 #include "main.h"
 
 /**
@@ -18,7 +17,6 @@ lastDigit = lastDigit * (-1);
 _putchar('0' + lastDigit);
 return (lastDigit);
 }
- _putchar('0' + lastDigit);
-_putchar('\n');
- return (0);
+_putchar('0' + lastDigit);
+return (0);
 }
