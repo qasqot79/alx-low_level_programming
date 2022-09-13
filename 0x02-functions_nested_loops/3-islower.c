@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*_islower -function to check lowercase characters.
+*_islower - function to check  lower case characters.
 *gc: ls the int that will be used for the arugument
 * Return: 0
 int _islower(int c)
