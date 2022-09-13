@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *  * print_alphabet_x10 - entry point
+ * print_alphabet_x10 - entry point
  * Description: show the alphabet
  *  Return
  */
