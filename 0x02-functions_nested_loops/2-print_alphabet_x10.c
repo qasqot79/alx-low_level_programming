@@ -1,9 +1,9 @@
  #include "main.h"
 
 /**
- * print_alphabet_x10 - entry point
- *Description: show the alphabet
- * Return
+ * prints 10 times the alphabet in lower case,followed by a new line.
+ * Description: show the alphabet
+ * Return: Always 0
  */
 void print_alphabet_x10(void)
 {
@@ -17,4 +17,5 @@ for (ch = 'a'; ch <= 'z'; ch++)
 }
 _putchar('\n');
 }
+ return (0);
 }
