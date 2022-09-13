@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 *_islower -function to check lowercase characters.
 *gc: ls the int that will be used for the arugument
@@ -11,3 +12,4 @@ int _islower(int c)
     }
     else
               return (0);
+}              
