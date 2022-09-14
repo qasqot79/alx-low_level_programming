@@ -1,21 +1,14 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - takes unspecificed number of arguments, returns value
- * Description: longer things about the print_alphabet_x10 function
- * Return: 0
+ * print_alphabet - prints the alphabet in lowercase, followed by a new line.
  */
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
-	int num;
-	int al;
+	char letter;
 
-	for (num = 0; num <= 9; num++)
-	{
-		for (al = 'a'; al <= 'z'; al++)
-		{
-			_putchar(al);
-		}
-		_putchar('\n');
-	}
+	for (letter = 'a'; letter <= 'z'; letter++)
+		_putchar(letter);
+
+	_putchar('\n');
 }
