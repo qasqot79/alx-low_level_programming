@@ -3,7 +3,7 @@
 /**
  * print the last digit of a number.
  * main - entry point
- * @number: integer
+ * @number: The number in question.
  * 
  * Return: value of the last digit.
  */
