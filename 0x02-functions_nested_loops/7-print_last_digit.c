@@ -3,8 +3,7 @@
 /**
  * print the last digit of a number.
  * main - entry point
- * @number: The number in question.
- * 
+ * @number: The number in question. 
  * Return: value of the last digit.
  */
 int print_last_digit(int number)
