@@ -4,7 +4,7 @@
  * print the last digit of a number.
  * main - entry point
  * @number: integer
- * Description: .
+ * Description: Prints the last digit of a number and return the value
  *
  * Return: value of the last digit.
  */
