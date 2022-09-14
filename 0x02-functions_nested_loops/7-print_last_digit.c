@@ -4,9 +4,9 @@
  * print the last digit of a number.
  * main - entry point
  * @number: integer
- * Description: Prints the last digit of a number and return the value
+ * Description: Prints the last digit of a number,return the value.
  *
- * Return: value of the last digit.
+ * Return: Always 0
  */
 int print_last_digit(int number)
 {
