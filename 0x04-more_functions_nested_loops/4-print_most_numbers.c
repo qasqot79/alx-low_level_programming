@@ -7,12 +7,15 @@
  */
 void print_most_numbers(void)
 {
-	char c;
-
-	for (c = '0'; c <= '9'; c++)
-	{
-		if (!(c == '2' || c == '4'))
-			_putchar(c);
-	}
-	_putchar('\n');
+  int i, n;
+  printf("Enter the value of n: 10");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+      if( (i!=2) && (i!=4) )
+      {
+         printf("%d ",i);
+      }
+  }
+  return 0;
 }
