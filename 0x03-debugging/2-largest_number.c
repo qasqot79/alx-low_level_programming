@@ -26,7 +26,6 @@ else if (c > b)
 else
 {     
         largest = b;
- 
 }
     
 return (largest);
