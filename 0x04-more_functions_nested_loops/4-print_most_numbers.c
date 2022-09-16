@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * print_most_numbers - prints 01356789\n
+ * print_most_numbers - Print numbers from 0-9 except 4 & 2
  *
- * Return: void
+ * Return: nothing
  */
 void print_most_numbers(void)
 {
-  int i, n;
-  printf("Enter the value of n: 10");
-  scanf("%d",&n);
-  for(i=1;i<=n;i++)
-  {
-      if( (i!=2) && (i!=4) )
-      {
-         printf("%d ",i);
-      }
-  }
-  return 0;
+	int n;
+
+for (n = 48; n < 58; n++)
+{
+if (n == 50) ́|| (n == 52))
+{
+continue
+}
+_putchar(n + '0');
+}
+_putchar(10);
 }
