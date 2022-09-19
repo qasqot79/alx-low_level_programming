@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * print_line - Draws a straight line using the character _.
- * @n: The number of _ characters to be printed.
+ * print_line - prints an underscore n times
+ * @n: number of times printed
+ *
+ * Return: void
  */
 void print_line(int n)
 {
-	int len;
+	int i;
 
-	if (n > 0)
+	for (i = 0; i < n; i++)
 	{
-		for (len = 0; len < n; len++)
-			    _putchar('_');
+		_putchar('_');
 	}
-
 	_putchar('\n');
 }
