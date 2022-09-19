@@ -5,7 +5,7 @@
  * @dest: Location to copy string to
  * @src: String to copy to given location
  *
- * Return: Pointer to dest
+ * Return: Pointer to dest 
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -16,5 +16,5 @@ char *_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 		i++;
 	}
-	return (dest);
+	return (0);
 }
