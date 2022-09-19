@@ -10,8 +10,7 @@ int len = 0, index = 0;
 char tmp;
 
 while (s[index++])
- len++;
-   
+len++;  
 for (index = len - 1; index >= len / 2; index--)
 {
 tmp = s[index];
