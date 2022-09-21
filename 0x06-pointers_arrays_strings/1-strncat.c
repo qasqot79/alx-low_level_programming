@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**  
- * @_strncat - function that concatenates two strings,does not need to 
+ * _strncat - function that concatenates two strings,does not need to 
  * be null-terminated if it contains n or more bytes.
  *
  * Return: Pointer to the resulting string dest.
