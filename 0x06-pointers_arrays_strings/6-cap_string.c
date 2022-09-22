@@ -8,7 +8,7 @@
  *
  * Return: char *
  */
-char *cap_string(char *n)
+char *cap_string(char *)
 {
 	int count;
 	int count2;
