@@ -1,42 +1,33 @@
 #include "main.h"
-
+#include<stdio.h>
 /**
- * cap_string - capitalice all words in a string
- * @str: string
+ * *cap_string - function capitalizes all words of a string
  *
- * Return: string
+ *@n: char * pointer
+ *
+ * Return: char *
  */
-char *cap_string(char *str)
+
+char *cap_string(char *n)
 {
-	int i = 0;
+	int count;
+	int count2;
+	char *x = " .,{}()\n\t\"?!";
 
-	if (str[0] >= 97 && str[i] <= 122)
-		str[0] = (str[0] - 32);
-
-	while (str[i])
+	for (count = 0; *(n + count) != '\0'; count++)
 	{
-		if ((str[i] == ',') || (str[i] == ';') ||
-		(str[i] == '!') || (str[i] == '.') ||
-		(str[i] == '?') || (str[i] == '"') ||
-		(str[i] == '(') || (str[i] == ')') ||
-		(str[i] == '{') || (str[i] == '}') ||
-		(str[i] == '\n') || (str[i] == ' '))
+		for (count2 = 0; *(x + count2) != '\0'; count2++)
 		{
-			i++;
-			if (str[i] >= 97 && str[i] <= 122)
-				str[i] = (str[i] - 32);
-			i--;
+			if (*(n + count - 1) == *(x + count2) && *(n + count) >=
+			    'a' && *(n + count) <= 'z')
+			{
+				*(n + count) = ('A' - 'a') + *(n + count);
+			}
+			else if ((count == 0) && *(n + count) >= 'a' && *(n + count) <= 'z')
+			{
+				*(n + count) = ('A' - 'a') + *(n + count);
+			}
 		}
-
-		else if (str[i] == '\t')
-		{
-			str[i] = (str[i] + 23);
-			i++;
-			if (str[i] >= 97 && str[i] <= 122)
-				str[i] = (str[i] - 32);
-			i--;
-		}
-		i++;
 	}
-	return (str);
+	return (n);
 }
