@@ -11,18 +11,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r);
  * @r_index: The current index of the buffer.
  *
  * Return: If r can store the sum - a pointer to the result.
- *         If r cannot store the sum - 0.
+ *  If r cannot store the sum - 0.
  */
-<<<<<<< HEAD
- 
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
-=======
 char *add_strings(char *n1, char *n2, char *r, int r_index)
->>>>>>> 74b80e83bcc1650dbf5966bb9c8ed929776bef57
 {
 	int num, tens = 0;
 
 	for (; *n1 && *n2; n1--, n2--, r_index--)
+
 	{
 		num = (*n1 - '0') + (*n2 - '0');
 		num += tens;
@@ -31,16 +27,15 @@ char *add_strings(char *n1, char *n2, char *r, int r_index)
 	}
 
 	for (; *n1; n1--, r_index--)
+
 	{
 		num = (*n1 - '0') + tens;
 		*(r + r_index) = (num % 10) + '0';
 		tens = num / 10;
-	}
-<<<<<<< HEAD
-	return
-=======
+        }
 
 	for (; *n2; n2--, r_index--)
+
 	{
 		num = (*n2 - '0') + tens;
 		*(r + r_index) = (num % 10) + '0';
@@ -48,32 +43,26 @@ char *add_strings(char *n1, char *n2, char *r, int r_index)
 	}
 
 	if (tens && r_index >= 0)
+
 	{
 		*(r + r_index) = (tens % 10) + '0';
 		return (r + r_index);
 	}
 
 	else if (tens && r_index < 0)
-		return (0);
+                return (0);
 
 	return (r + r_index + 1);
->>>>>>> 74b80e83bcc1650dbf5966bb9c8ed929776bef57
 }
 /**
  * infinite_add - Adds two numbers.
- * @n1: The first number to be added.
+ * @n1: The first number to be added
  * @n2: The second number to be added.
  * @r: The buffer to store the result.
  * @size_r: The buffer size.
-<<<<<<< HEAD
- * Return: If r can store the sum - a pointer to the result.
  *
+ * Return: If r can store the sum - a pointer to the result.
  * If r cannot store the sum - 0.
-=======
- *
- * Return: If r can store the sum - a pointer to the result.
- *         If r cannot store the sum - 0.
->>>>>>> 74b80e83bcc1650dbf5966bb9c8ed929776bef57
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
@@ -82,15 +71,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (index = 0; *(n1 + index); index++)
 		n1_len++;
 
-<<<<<<< HEAD
-=======
 	for (index = 0; *(n2 + index); index++)
-		n2_len++;
+            	n2_len++;
 
->>>>>>> 74b80e83bcc1650dbf5966bb9c8ed929776bef57
 	if (size_r <= n1_len + 1 || size_r <= n2_len + 1)
 		return (0);
-
+       
 	n1 += n1_len - 1;
 	n2 += n2_len - 1;
 	*(r + size_r) = '\0';
