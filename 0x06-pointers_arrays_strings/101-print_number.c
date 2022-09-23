@@ -13,19 +13,10 @@ void print_number(int n)
 		_putchar('-');
 		n *= -1;
 	}
-<<<<<<< HEAD
 	 x = n;
 
 	 if ((x / 10) > 0)
 		 print_number(x / 10);
 	
 	 _putchar((x % 10) + '0');
-=======
-        x = n;
-	
-	if ((x / 10) > 0)
-		print_number(x / 10);
-
-	_putchar(x % 10) + '0');
->>>>>>> 74b80e83bcc1650dbf5966bb9c8ed929776bef57
 }
