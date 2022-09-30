@@ -20,7 +20,4 @@ char *_strchr(char *s, char c)
 			return (NULL);
 	}
 	return (NULL);
-<<<<<<< HEAD
-=======
 }
->>>>>>> fbcabf948fd00457bd652dfe4b122405d10a2afc
