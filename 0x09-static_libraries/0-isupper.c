@@ -2,10 +2,7 @@
 
 /**
  * _isupper - checks for uppercase character
-<<<<<<< HEAD
-=======
  *
->>>>>>> fbcabf948fd00457bd652dfe4b122405d10a2afc
  * @c: parameter hard-coded in main
  *
  * Return: 0 or 1
