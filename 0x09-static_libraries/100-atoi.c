@@ -13,7 +13,3 @@ int _atoi(char *s)
 	s = s + 1;
 	return (0);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> fbcabf948fd00457bd652dfe4b122405d10a2afc
