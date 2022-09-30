@@ -21,8 +21,4 @@ int _isdigit(int c)
 		i = 0;
 	}
 	return (i);
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> fbcabf948fd00457bd652dfe4b122405d10a2afc
