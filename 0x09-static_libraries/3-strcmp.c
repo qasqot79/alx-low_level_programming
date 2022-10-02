@@ -2,38 +2,40 @@
 #include <stdio.h>
 
 /**
- * _strspn - function that gets the length of a prefix substring
+ * _strcmp - function that compares two strings
  *
- * @s: parameter defined in main, pointer to memory (string)
- * @accept: parameter defined in main, characters to be compared with s string
+ * @s1: parameter defined in main
+ * @s2: parameter defined in main
  *
- * Return: integer, number of bytes common to the two strings
+ * Return: 15 or -15 or 0
  */
 
-unsigned int _strspn(char *s, char *accept)
+int _strcmp(char *s1, char *s2)
 {
-	int size = 0;
-	unsigned int bytes = 0;
-	char *tmp = accept;
-	int i;
-
-	while (*accept++)
-		size++;
-	accept = tmp;
-
-	while (*s)
+/*
+ *	char *tmp1 = s1;
+ *	char *tmp2 = s2;
+ */
+	while (*s1 != '\0')
 	{
-		accept = tmp;
-		i = 0;
-		while (accept < tmp + size)
+		if (*s1 == *s2)
 		{
-			if (*s == *accept)
-				bytes++, i++;
-			accept++;
+			s1++;
+			s2++;
 		}
-		if (i == 0)
-			break;
-		s++;
+		else
+		{
+			if (*s1 > *s2)
+				return (*s1 - *s2);
+			else if (*s1 < *s2)
+				return (*s1 - *s2);
+			s1++;
+			s2++;
+		}
 	}
-	return (bytes);
+/*
+ *	s1 = tmp1;
+ *	s2 = tmp2;
+ */
+	return (0);
 }
