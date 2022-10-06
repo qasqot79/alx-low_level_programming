@@ -1,158 +1,147 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - program that multiplies two positive numbers
+ * _print - moves a string one place to the left and prints the string
+ * @str: string to move
+ * @l: size of string
  *
- * @argc: argument count, must be 3
- * @argv: arguments, argv[1] and argv[2]
- *
- * Return: product of argv[1] by argv[2]
+ * Return: void
  */
-
-int main(int argc, char *argv[])
+void _print(char *str, int l)
 {
-	char *num1, *num2;
-	int i, j, k, len1, len2, len, d1, d2, d1d2, carry, *mul;
+	int i, j;
 
-	if (argc != 3 || !(_isnumber(argv[1])) || !(_isnumber(argv[2])))
-		_error(), exit(98);
-	num1 = argv[1], num2 = argv[2];
-	len1 = _strlen(num1), len2 = _strlen(num2), len = len1 + len2;
-	mul = _calloc(len, sizeof(int));
-	if (mul == NULL)
-		exit(98);
-	for (i = len1 - 1; i >= 0; i--)
+	i = j = 0;
+	while (i < l)
 	{
-		d1 = num1[i] - '0';
-		carry = 0;
-		for (j = len2 - 1; j >= 0; j--)
+		if (str[i] != '0')
+			j = 1;
+		if (j || i == l - 1)
+			_putchar(str[i]);
+		i++;
+	}
+
+	_putchar('\n');
+	free(str);
+}
+
+/**
+ * mul - multiplies a char with a string and places the answer into dest
+ * @n: char to multiply
+ * @num: string to multiply
+ * @num_index: last non NULL index of num
+ * @dest: destination of multiplication
+ * @dest_index: highest index to start addition
+ *
+ * Return: pointer to dest, or NULL on failure
+ */
+char *mul(char n, char *num, int num_index, char *dest, int dest_index)
+{
+	int j, k, mul, mulrem, add, addrem;
+
+	mulrem = addrem = 0;
+	for (j = num_index, k = dest_index; j >= 0; j--, k--)
+	{
+		mul = (n - '0') * (num[j] - '0') + mulrem;
+		mulrem = mul / 10;
+		add = (dest[k] - '0') + (mul % 10) + addrem;
+		addrem = add / 10;
+		dest[k] = add % 10 + '0';
+	}
+	for (addrem += mulrem; k >= 0 && addrem; k--)
+	{
+		add = (dest[k] - '0') + addrem;
+		addrem = add / 10;
+		dest[k] = add % 10 + '0';
+	}
+	if (addrem)
+	{
+		return (NULL);
+	}
+	return (dest);
+}
+/**
+ * check_for_digits - checks the arguments to ensure they are digits
+ * @av: pointer to arguments
+ *
+ * Return: 0 if digits, 1 if not
+ */
+int check_for_digits(char **av)
+{
+	int i, j;
+
+	for (i = 1; i < 3; i++)
+	{
+		for (j = 0; av[i][j]; j++)
 		{
-			d2 = num2[j] - '0';
-			d1d2 = d1 * d2;
-			mul[i + j + 1] += d1d2 % 10;
-			carry = d1d2 / 10;
-			if (mul[i + j + 1] > 9)
-			{
-				mul[i + j] += mul[i + j + 1] / 10;
-				mul[i + j + 1] = mul[i + j + 1] % 10;
-			}
-			mul[i + j] += carry;
+			if (av[i][j] < '0' || av[i][j] > '9')
+				return (1);
 		}
 	}
-	for (k = 0; mul[k] == 0 && k < len; k++)
-		;
-	if (k == len)
-		_putchar(mul[len - 1] + '0');
-	else
-	{
-		for (i = k; i < len; i++)
-			_putchar(mul[i] + '0');
-	}
-	_putchar('\n');
-	free(mul);
 	return (0);
 }
 
 /**
- * _isnumber - checks for digit-only (0 through 9) numbers
+ * init - initializes a string
+ * @str: sting to initialize
+ * @l: length of strinf
  *
- * @str: parameter hard-coded in main
- *
- * Return: 1 or 0
- */
-
-int _isnumber(char *str)
-{
-	int i;
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (0);
-	}
-	return (1);
-}
-
-/**
- * _error - print error
  * Return: void
  */
-
-void _error(void)
+void init(char *str, int l)
 {
 	int i;
-	char error[] = "Error";
 
-	for (i = 0; i < 5; i++)
-		_putchar(error[i]);
-	_putchar('\n');
+	for (i = 0; i < l; i++)
+		str[i] = '0';
+	str[i] = '\0';
 }
 
 /**
- * _strlen - function that returns the length of a string
+ * main - multiply two numbers
+ * @argc: number of arguments
+ * @argv: argument vector
  *
- * @s: parameter defined in main
- *
- * Return: length of string
+ * Return: zero, or exit status of 98 if failure
  */
-
-int _strlen(char *s)
+int main(int argc, char *argv[])
 {
-	int i = 0;
+	int l1, l2, ln, ti, i;
+	char *a;
+	char *t;
+	char e[] = "Error\n";
 
-	while (*s != '\0')
+	if (argc != 3 || check_for_digits(argv))
 	{
-		i++;
-		s++;
+		for (ti = 0; e[ti]; ti++)
+			_putchar(e[ti]);
+		exit(98);
 	}
-	return (i);
-}
-
-/**
- * _calloc - function that allocates memory for an array, using malloc
- * @nmemb: size of the memory space to allocate in bytes
- * @size: size of type
- * Return: void pointer
- */
-
-void *_calloc(unsigned int nmemb, unsigned int size)
-{
-	void *ptr;
-
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
+	for (l1 = 0; argv[1][l1]; l1++)
+		;
+	for (l2 = 0; argv[2][l2]; l2++)
+		;
+	ln = l1 + l2 + 1;
+	a = malloc(ln * sizeof(char));
+	if (a == NULL)
 	{
-		return (NULL);
+		for (ti = 0; e[ti]; ti++)
+			_putchar(e[ti]);
+		exit(98);
 	}
-	_memset(ptr, 0, size * nmemb);
-	return (ptr);
-}
-
-/**
- * _memset - function that fills memory with a constant byte
- *
- * @s: parameter defined in main, pointer to memory area
- * @b: parameter defined in main, constant byte
- * @n: parameter defined in main, number of bytes to be filled
- *
- * Return: memory address of function (memory area)
- */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	unsigned int i;
-	char *tmp = s;
-
-	for (i = 0; i < n; i++)
+	init(a, ln - 1);
+	for (ti = l2 - 1, i = 0; ti >= 0; ti--, i++)
 	{
-		*s = b;
-		s++;
+		t = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
+		if (t == NULL)
+		{
+			for (ti = 0; e[ti]; ti++)
+				_putchar(e[ti]);
+			free(a);
+			exit(98);
+		}
 	}
-	s = tmp;
-	return (s);
+	_print(a, ln - 1);
+	return (0);
 }
