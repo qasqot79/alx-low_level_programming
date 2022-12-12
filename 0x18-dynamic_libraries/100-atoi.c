@@ -12,7 +12,6 @@ int _atoi(char *s)
 {
 	s = s + 1;
 	return (0);
-<<<<<<< HEAD
-=======
+
 }
->>>>>>> 210e560cebcb10a2b208b7f06219289acb047dcc
+

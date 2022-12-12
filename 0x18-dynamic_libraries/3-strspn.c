@@ -36,7 +36,6 @@ unsigned int _strspn(char *s, char *accept)
 		s++;
 	}
 	return (bytes);
-<<<<<<< HEAD
-=======
+
 }  
->>>>>>> 210e560cebcb10a2b208b7f06219289acb047dcc
+
