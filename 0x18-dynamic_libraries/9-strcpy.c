@@ -34,7 +34,5 @@ char *_strcpy(char *dest, char *src)
  *	dest[i] = '\0';
  *	return (dest);
  */
-<<<<<<< HEAD
-=======
+
 }
->>>>>>> 210e560cebcb10a2b208b7f06219289acb047dcc
